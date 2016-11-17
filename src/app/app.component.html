@@ -4,16 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Shivaji!!!</title>
     <link rel="stylesheet" href="">
 </head>
 
 <body>
     <div>
-        <app-simple-form></app-simple-form>
-        {{mail.message}}
-        <hr>
-        {{api}}
+        <ul>
+            <li *ngFor="let message of mail.messages">
+                {{message.text}}
+            </li>
+        </ul>
+        <app-simple-form *ngFor="let message of mail.messages" 
+                [message]="message.text"
+                (update)="onUpdate(message.id, $event.text)">
+        </app-simple-form>
     </div>
 </body>
 

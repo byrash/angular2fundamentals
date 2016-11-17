@@ -7,6 +7,9 @@ import { MailService } from './mail.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Lets get started!';
-  constructor(@Inject('mail') private mail, @Inject('api') private api){}
+  constructor(@Inject('mail') private mail){}
+
+  onUpdate(id,text){
+    this.mail.update(id,text);
+  }
 }

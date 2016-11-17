@@ -19,7 +19,7 @@ import { MailService } from './mail.service';
   ],
   providers: [
     {provide:'mail',useClass:MailService},
-    {provide:'api',useValue:'http://loalhots:3000'}
+    {provide:'api',useValue:'http://localhost:3000'}
   ],
   bootstrap: [AppComponent]
 })
