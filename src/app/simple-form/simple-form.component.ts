@@ -1,6 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
+  // Controlls the import of styles from parent styles
+  encapsulation: ViewEncapsulation.Native, 
   selector: 'app-simple-form',
   template: `
     <div>
